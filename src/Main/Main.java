@@ -30,16 +30,21 @@ public class Main {
         double taxaJuros = interfaceUsuario.pedirTaxaJurosAnual();
 
         // instanciar objeto do tipo financiamento
-        financiamentos.add(new Casa(valorImovel, prazoFinan, taxaJuros));
+        financiamentos.add(new Casa(valorImovel, prazoFinan, taxaJuros, 150,
+                100));
 
         //Fechando scanner
         scanner.close();
 
         // Instanciar os objetos para teste
-        financiamentos.add(new Casa(500000.00, 10, 0.1));
-        financiamentos.add(new Apartamento(200000.00, 10, 0.1));
-        financiamentos.add(new Apartamento(500000.00, 10, 0.1));
-        financiamentos.add(new Terreno(500000.00, 10, 0.1));
+        financiamentos.add(new Casa(500000.00, 10, 10,
+                150, 100));
+        financiamentos.add(new Apartamento(200000.00, 10, 10,
+                1,2));
+        financiamentos.add(new Apartamento(500000.00, 10, 10,
+                2, 12));
+        financiamentos.add(new Terreno(500000.00, 10, 10,
+                true));
 
         // variáveis para somar valores
         double totalImoveis = 0;

@@ -31,11 +31,12 @@ public class InterfaceUsuario {
     }
     // Método para solicitar o prazo do financiamento ao usuário
     public int pedirPrazoFinanciamento() {
-        return (int) pedirValorValido("Digite o prazo do financiamento: ");
+        return (int) pedirValorValido("Digite o prazo do financiamento (em anos): ");
     }
     // Método para solicitar a taxa de juros anual
     public double pedirTaxaJurosAnual(){
         return pedirValorValido("Digite a taxa de " +
                 "juros anual (em percentual): ");
+
     }
 }
