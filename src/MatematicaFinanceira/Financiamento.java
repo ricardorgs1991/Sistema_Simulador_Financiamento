@@ -1,6 +1,7 @@
 package MatematicaFinanceira;
 
-public abstract class Financiamento {
+import java.io.Serializable;
+public abstract class Financiamento implements Serializable {
     // Atributos da classe
     private double valorImovel;
     private int prazoFinanciamento;

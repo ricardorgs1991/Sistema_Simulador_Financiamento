@@ -2,17 +2,17 @@ package MatematicaFinanceira;
 
 public class Terreno extends Financiamento {
     private static final double acrescimo = 1.02; //Percentual acrescimo
-    private boolean zona; //True = Residencial, False = Comerncial
+    private String zona; //True = Residencial, False = Comerncial
 
     // Método construtor
-    public Terreno(double valorImovel,int prazoFinanciamento, double taxaJurosAnual, boolean zona) {
+    public Terreno(double valorImovel,int prazoFinanciamento, double taxaJurosAnual, String zona) {
         super(valorImovel, prazoFinanciamento, taxaJurosAnual);
         this.zona = zona;
     }
 
     // Método geter
 
-    public boolean isZona() {
+    public String isZona() {
         return zona;
     }
 
