@@ -12,7 +12,7 @@ public class Terreno extends Financiamento {
 
     // Método geter
 
-    public String isZona() {
+    public String getZona() {
         return zona;
     }
 

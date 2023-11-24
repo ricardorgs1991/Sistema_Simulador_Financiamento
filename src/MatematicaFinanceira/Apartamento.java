@@ -15,6 +15,9 @@ public class Apartamento extends Financiamento {
 
     // Métodos getters
 
+    public int getNumeroVagasGaragem() {
+        return numeroVagasGaragem;
+    }
 
     public int getNumeroAndar() {
         return numeroAndar;
