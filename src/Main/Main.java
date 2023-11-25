@@ -31,10 +31,16 @@ public class Main {
                     System.out.println("Sainda da aplicação");
                     break;
                 } else if (escolha == 4) {
-                  //  interfaceUsuario.salvarArquivo(financiamentos);
+                    interfaceUsuario.escreverArquivo();
                     continue;
-                } else if (escolha > 4) {
+                } else if (escolha > 6 || escolha < 0) {
                     System.out.println("Número inválido");
+                    continue;
+                } else if (escolha == 5) {
+                    interfaceUsuario.salvarArrayFinanciamento(financiamentos);
+                    continue;
+                } else if (escolha == 6) {
+                    interfaceUsuario.lerArrayFinanciamento();
                     continue;
                 }
 
@@ -45,12 +51,15 @@ public class Main {
                 // instanciar objeto do tipo financiamento
                 financiamentos = interfaceUsuario.instaciarObjetos(escolha, valorImovel,
                         prazoFinan, taxaJuros, financiamentos);
-                //Fechando scanner
+
+                scanner.nextLine();
+
             } catch (jurosMuitoAltoException e) {
                 System.out.println("Erro: " + e.getMessage());
 
             } catch (InputMismatchException e) {
                 System.out.println("Entrada inválida.");
+                escolha = 0;
             }
         } while (escolha != 0);
         scanner.close();

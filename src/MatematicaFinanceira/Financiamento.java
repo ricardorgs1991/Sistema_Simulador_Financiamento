@@ -2,6 +2,8 @@ package MatematicaFinanceira;
 
 import java.io.Serializable;
 public abstract class Financiamento implements Serializable {
+    // Adiciona um ID de versão serial padrão a classe.
+    private static final long serialVersionUID = 1L;
     // Atributos da classe
     private double valorImovel;
     private int prazoFinanciamento;
@@ -31,5 +33,18 @@ public abstract class Financiamento implements Serializable {
 
     public double getTaxaJurosAnual() {
         return taxaJurosAnual;
+    }
+
+    // Escrever atributos em uma string
+    public String toString() {
+        StringBuilder builder = new StringBuilder();
+        builder.append("Valor do Imóvel: " + valorImovel);
+        builder.append("\n");
+        builder.append("Prazo do Financiamento: " + prazoFinanciamento);
+        builder.append("\n");
+        builder.append("Taxa de juros mensal: " + taxaJurosAnual);
+        builder.append("\n");
+
+        return builder.toString();
     }
 }
